@@ -1,13 +1,11 @@
 import { GraduationCap, Code, Briefcase, Zap, BarChart, Users, Brain, Bot, Rocket } from 'lucide-react';
 
-// CẬP NHẬT: Hàm helper trỏ trực tiếp vào thư mục public/trainer bạn đã tạo.
-// Đường dẫn bắt đầu bằng /public/trainer/ giúp đảm bảo trình duyệt tìm đúng file
-// bất kể server của bạn có cấu hình ẩn thư mục public hay không.
+// Helper to get image path. In Vite, files in 'public/trainer' are served at './trainer' relative to the base.
 const getTrainerImage = (source: string) => {
   if (source.startsWith('http')) {
     return source;
   }
-  return `/public/trainer/${source}`;
+  return `./trainer/${source}`;
 };
 
 export const NAV_LINKS = [
