@@ -173,7 +173,7 @@ const Navbar = () => {
                   {link.label}
                 </a>
               ))}
-              <a href="#register" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-5 py-2 rounded-full font-medium hover:shadow-lg hover:shadow-cyan-500/25 transition-all transform hover:scale-105">
+              <a href="#register" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-5 py-2 rounded-full font-medium hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 transform hover:scale-105 active:scale-95">
                 Đăng ký ngay
               </a>
             </div>
@@ -223,7 +223,7 @@ const Hero = () => {
           Làm chủ công cụ AI, tối ưu hóa hiệu suất làm việc và giải quyết các bài toán kinh doanh thực tế chỉ trong 6 tuần.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up delay-300">
-          <a href="#register" className="group bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:shadow-lg hover:shadow-cyan-500/25 transition-all transform hover:-translate-y-1 flex items-center gap-2">
+          <a href="#register" className="group bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 transform hover:-translate-y-1 active:scale-95 flex items-center gap-2">
             Đăng ký ngay
             <ArrowRight className="group-hover:translate-x-1 transition-transform" />
           </a>
@@ -305,9 +305,9 @@ const Curriculum = () => {
               <button
                 key={session.id}
                 onClick={() => setActiveSession(index)}
-                className={`w-full text-left p-4 rounded-xl transition-all duration-300 flex items-center justify-between group ${activeSession === index
-                    ? 'bg-white/10 border border-cyan-500/50 shadow-[0_0_15px_rgba(6,182,212,0.15)]'
-                    : 'bg-transparent hover:bg-white/5 border border-transparent'
+                className={`w-full text-left p-4 rounded-xl transition-all duration-300 active:scale-95 flex items-center justify-between group ${activeSession === index
+                  ? 'bg-white/10 border border-cyan-500/50 shadow-[0_0_15px_rgba(6,182,212,0.15)]'
+                  : 'bg-transparent hover:bg-white/5 border border-transparent'
                   }`}
               >
                 <div>
@@ -473,7 +473,7 @@ const PricingSection = () => {
 
               <p className="text-gray-300 text-sm mb-8 min-h-[40px]">{plan.note}</p>
 
-              <a href="#register" className={`block w-full py-3 rounded-lg text-center font-bold transition-all ${plan.highlight ? 'bg-cyan-500 hover:bg-cyan-400 text-white shadow-lg shadow-cyan-500/25' : 'bg-white/10 hover:bg-white/20 text-white'}`}>
+              <a href="#register" className={`block w-full py-3 rounded-lg text-center font-bold transition-all duration-300 transform active:scale-95 ${plan.highlight ? 'bg-cyan-500 hover:bg-cyan-400 text-white shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40' : 'bg-white/10 hover:bg-white/20 text-white'}`}>
                 Đăng ký ngay
               </a>
             </div>
